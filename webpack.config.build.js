@@ -9,13 +9,10 @@ module.exports = Object.assign(webpackConfig, {
 
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: '[name].js'
     },
 
     plugins: webpackConfig.plugins.concat([
-        new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor', 'manifest']
-        }),
 
         new CleanWebpackPlugin(['dist'])
     ])

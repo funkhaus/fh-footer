@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
 const dirNode = 'node_modules';
-const dirApp = path.join(__dirname, 'app');
+const dirApp = path.join(__dirname, 'src');
 const dirAssets = path.join(__dirname, 'assets');
 
 const appHtmlTitle = 'Webpack Boilerplate';
@@ -16,10 +16,6 @@ const appHtmlTitle = 'Webpack Boilerplate';
  */
 module.exports = {
     entry: {
-        vendor: [
-            'jquery',
-            'lodash'
-        ],
         bundle: path.join(dirApp, 'index')
     },
     resolve: {
@@ -32,17 +28,6 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             IS_DEV: IS_DEV
-        }),
-
-        new webpack.ProvidePlugin({
-            // jQuery
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            'root.jQuery': 'jquery',
-
-            // lodash
-            '_': 'lodash'
         }),
 
         new HtmlWebpackPlugin({
