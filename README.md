@@ -29,3 +29,9 @@ Options are an object passed like this:
     * String with CSS value for the neighbor's `position`. Default `relative`.
 * `neighborZIndex`
     * Number with CSS value for the neighbor's `z-index`. Default `5`.
+
+## Development
+1. Clone this repo.
+1. `npm install`
+1. `npm run dev` for development.
+1. `npm run build` for bundling/minification.
