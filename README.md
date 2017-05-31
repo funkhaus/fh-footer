@@ -1,18 +1,31 @@
 ## What
-Boilerplate for developing JS libraries.
+Self-updating "slide-to-reveal" footer, like on the [Funkhaus site](http://funkhaus.us/) (scroll to the bottom of the page).
 
 ## How
-1. Clone this repo.
-1. `npm install`
-1. Work out of `/src` and build to `/dist`.
+```html
+<div class="content">
+    Your content here...
+</div>
+<div class="footer">
+    Your footer here...
+</div>
 
-### Development
-Edit the `index.ejs` file to include an example of your library's implementation, then run the local webpack-dev-server with livereload and autocompile on [http://localhost:8080/](http://localhost:8080/) with
-```sh
-$ npm run dev
+<script src="path/to/bundle.js"></script>
+<script>
+    new RevealFooter('.footer');
+</script>
 ```
-### Deployment
-Build the current application
-```sh
-$ npm run build
-```
+
+That's it!
+
+## Options
+Options are an object passed like this:
+`new RevealFooter('.your-selector-string', { options })`
+* `bottom`
+    * Number of pixels for the footer to be place from the bottom of the screen. Default 0.
+* `neighbor`
+    * String with the selector for the element that will slide up to reveal the footer. Defaults to the footer's previous sibling.
+* `neighborPosition`
+    * String with CSS value for the neighbor's `position`. Default `relative`.
+* `neighborZIndex`
+    * Number with CSS value for the neighbor's `z-index`. Default `5`.

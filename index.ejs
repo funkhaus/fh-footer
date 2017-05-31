@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-<body>
-    <div class="content">
+<body style="font-family: sans-serif; font-weight: 700; margin: 0;">
+    <div class="content" style="background-color: #fff; padding: 20px;">
+        <h2>I'm some content.</h2>
+
+        <p style="min-height: 150vh; margin: 20px; background-color: #c66; border-radius: 10px; padding: 20px;">
+            Scroll to the bottom of the page to reveal the footer.
+        </p>
+    </div>
+
+    <div class="footer" style="background-color: #333; width: 100%; color: #fff; text-align: center; padding: 40px;">
+        I'm the footer.<br><br>I can be as tall or short as needed, and I'll resize myself consistently.
     </div>
 
     <!-- place content you want to go before the contents of bundle.js here -->
@@ -21,7 +30,11 @@
 <!-- place content you want to run after bundle.js here -->
 <!-- for example, code to test the contents of bundle.js -->
 
+<script>
 
+    new RevealFooter('.footer');
+
+</script>
 
 <!-- end post-bundle.js area -->
 

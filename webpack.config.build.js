@@ -8,6 +8,7 @@ module.exports = Object.assign(webpackConfig, {
     devtool: 'cheap-module-source-map',
 
     output: {
+        library: 'RevealFooter',
         path: path.join(__dirname, 'dist'),
         filename: '[name].js'
     },
