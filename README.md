@@ -1,6 +1,8 @@
 ## What
 Self-updating "slide-to-reveal" footer, like on the [Funkhaus site](http://funkhaus.us/) (scroll to the bottom of the page).
 
+Use `dist/bundle.js` on production sites.
+
 ## How
 ```html
 <div class="content">
